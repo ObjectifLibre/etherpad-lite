@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+HOMEDIR=/usr/share/etherpad-lite
+
+if ! getent group etherpad-lite >/dev/null; then
+    addgroup --system etherpad-lite >/dev/null
+fi
+
+if ! getent passwd etherpad-lite >/dev/null; then
+    adduser --system --disabled-login \
+        --ingroup etherpad-lite --home $HOMEDIR \
+        --gecos "Etherpad Lite" --shell /bin/false \
+        etherpad-lite >/dev/null
+fi
+
+chown -R etherpad-lite:etherpad-lite /usr/share/etherpad-lite
+
+#DEBHELPER#

@@ -1,0 +1,22 @@
+etherpad-lite (20130126+git6b13bfa-0gpocentek1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gauvain Pocentek <gauvain@pocentek.net>  Sat, 26 Jan 2013 05:17:09 +0100
+
+etherpad-lite (20111017+gitfb158d2+gpocentek1) lucid; urgency=low
+
+  * debian/rules:
+    - move the config file in /etc and create a symlink in /var
+  * debian/control:
+    - recommend node-sqlite3
+    - improve the package description
+  * Provide an apache2 configuration sample
+
+ -- Gauvain Pocentek <gauvain@pocentek.net>  Sat, 22 Oct 2011 11:25:05 +0200
+
+etherpad-lite (20111017+gitfb158d2) lucid; urgency=low
+
+  * Initial release.
+
+ -- Gauvain Pocentek <gauvain@pocentek.net>  Mon, 17 Oct 2011 18:04:20 +0200

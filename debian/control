@@ -1,0 +1,20 @@
+Source: etherpad-lite
+Section: web
+Priority: optional
+Maintainer: Gauvain Pocentek <gauvain@pocentek.net>
+Build-Depends: debhelper (>= 9), python, npm, nodejs
+Standards-Version: 3.9.4
+
+Package: etherpad-lite
+Architecture: all
+Depends: nodejs, adduser, ${misc:Depends}, ${python:Depends}, ${perl:Depends}
+Recommends: node-sqlite3
+Suggests: apache2
+Description: an Etherpad based on node.js
+ Etherpad lite is a really-real time collaborative editor spawned from the Hell
+ fire of Etherpad. It is reusing the well tested Etherpad easysync library to
+ make it really realtime. Etherpad Lite is based on node.js ergo is much
+ lighter and more stable than the original Etherpad. Our hope is that this will
+ encourage more users to use and install a realtime collaborative editor. A
+ smaller, manageable and well documented codebase makes it easier for
+ developers to improve the code and contribute towards the project.

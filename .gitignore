@@ -15,3 +15,9 @@ npm-debug.log
 .ep_initialized
 *.crt
 *.key
+debian/etherpad-lite.debhelper.log
+debian/*.debhelper
+debian/*.substvars
+debian/etherpad-lite
+debian/files
+

@@ -1,0 +1,12 @@
+bin usr/share/etherpad-lite
+*.md usr/share/etherpad-lite
+doc usr/share/etherpad-lite
+LICENSE usr/share/etherpad-lite
+Makefile usr/share/etherpad-lite
+node_modules usr/share/etherpad-lite
+settings.json usr/share/etherpad-lite
+settings.json.template usr/share/etherpad-lite
+src usr/share/etherpad-lite
+tools usr/share/etherpad-lite
+var usr/share/etherpad-lite
+debian/bin/etherpad-lite usr/bin

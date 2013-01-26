@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd /usr/share/etherpad-lite/
+./bin/run.sh "$@"
+
+exit 0
+
+

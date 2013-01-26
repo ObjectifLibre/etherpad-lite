@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+PKGDIR = $(CURDIR)/debian/etherpad-lite
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_build:
+	bin/installDeps.sh
+	npm install mysql
+
+override_dh_install:
+	dh_install
+	find $(PKGDIR) -name .gitignore -exec rm  \{\} \;
+	mkdir -p $(PKGDIR)/etc
+	mv $(PKGDIR)/usr/share/etherpad-lite/settings.json \
+		$(PKGDIR)/etc/etherpad-lite.json
+	ln -s /etc/etherpad-lite.json \
+		$(PKGDIR)/usr/share/etherpad-lite/settings.json
+
