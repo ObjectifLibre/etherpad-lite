@@ -1,0 +1,9 @@
+#!/bin/sh
+
+(
+mysql -uLOGIN -pPASSWORD DATABASE << EOF
+select distinct \`key\` from store where \`key\` REGEXP "^pad:[^:]+$";
+EOF
+) | grep -v "^key$" | cut -d: -f 2 | tr '\n' ' '
+
+

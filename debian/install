@@ -9,4 +9,4 @@ settings.json.template usr/share/etherpad-lite
 src usr/share/etherpad-lite
 tools usr/share/etherpad-lite
 var usr/share/etherpad-lite
-debian/bin/etherpad-lite usr/bin
+debian/bin/* usr/bin/

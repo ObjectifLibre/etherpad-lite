@@ -9,6 +9,16 @@ exports.expressCreateServer = function (hook_name, args, cb) {
     res.send(eejs.require("ep_etherpad-lite/templates/index.html"));
   });
 
+  args.app.get('/listofpads', function(req, res)
+  {
+    //res.header("Content-Type", "text/html; charset=utf-8");
+    var sys = require('sys')
+    var exec = require('child_process').exec;
+    var child = exec("/usr/bin/etherpad-lite-list", function (error, stdout, stderr) {
+      res.send(stdout);
+    });
+  });
+
   //serve robots.txt
   args.app.get('/robots.txt', function(req, res)
   {

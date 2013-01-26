@@ -1,0 +1,12 @@
+#!/bin/sh
+
+PAD=$1
+
+[ -z "$PAD" ] && exit 1
+
+mysql -uLOGIN -pPASSWORD DATABASE << EOF
+delete from store where `key` = "pad:$PAD" or `key` like "pad:$PAD:%" or `key` = "pad2readonly:$PAD";
+select distinct \`key\` from store where \`key\` REGEXP "^pad:[^:]+$";
+EOF
+
+
